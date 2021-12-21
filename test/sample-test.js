@@ -3,12 +3,12 @@ const { ethers } = require("hardhat");
 
 describe("HASHMarket", function () {
   it("Should create and execute market sales", async function () {
-    const Market = await ethers.getContratFactory("HASHMarket")
-    const Market = await Markey.deploy()
+    const Market = await ethers.getContractFactory("HASHMarket")
+    const market = await Market.deploy()
     await market.deployed()
     const marketAddress = market.address
 
-    const NFT = await ethers.getContratFactory("HASHMarket")
+    const NFT = await ethers.getContractFactory("NFT")
     const nft = await NFT.deploy(marketAddress)
     await nft.deployed()
     const nftContractAddress = nft.address
@@ -16,19 +16,31 @@ describe("HASHMarket", function () {
     let listingPrice = await market.getListingPrice()
     listingPrice = listingPrice.toString()
 
-    const auctionPrice = ether.utils.parseUnits('1', 'ether')
+    const auctionPrice = ethers.utils.parseUnits('1', 'ether')
 
     await nft.createToken("www.tokenloaction.com")
     await nft.createToken("www.tokenloaction2.com")
 
-    await market.createMarketItem(nftContractAddress, 1, auctionPrice, { vlaue: listingPrice })
-    await market.createMarketItem(nftContractAddress, 2, auctionPrice, { vlaue: listingPrice })
+    await market.createMarketItem(nftContractAddress, 1, auctionPrice, { value: listingPrice })
+    await market.createMarketItem(nftContractAddress, 2, auctionPrice, { value: listingPrice })
 
     const [_, buyerAddress] = await ethers.getSigners()
 
     await market.connect(buyerAddress).createMarketSale(nftContractAddress, 1, { value: auctionPrice})
 
-    const items = await market.fetchMarketItems()
+    let items = await market.fetchMarketItems()
+
+    items = await Promise.all(items.map(async i => {
+      const tokenUri = await nft.tokenURI(i.tokenId)
+      let item = {
+        price: i.price.toString(),
+        tokenId: i.tokenId.toString(),
+        seller: i.seller,
+        owner: i.owner,
+        tokenUri
+      }
+      return item
+    }))
 
     console.log('items: ', items)
   });
