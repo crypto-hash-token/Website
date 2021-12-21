@@ -8,7 +8,7 @@ import {
 } from '../config'
 
 import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
-import NFT from '../artifacts/contracts/HASHMarket.sol/HASHMarket.json'
+import Market from '../artifacts/contracts/HASHMarket.sol/HASHMarket.json'
 
 export default function Home() {
   const [nfts, setNfts] = useState([])
@@ -19,9 +19,9 @@ export default function Home() {
   }, [])
 
   async function loadNFTs() {
-    const provider = new ethers.provders.jasonRpcProveder()
+    const provider = new ethers.providers.JsonRpcProvider()
     const tokenContract = new ethers.Contract(nftaddress, NFT.abi, provider)
-    const marketContract = new ethers.Contract(nftmarketaddress, Market.abi, provider)
+    const marketContract = new ethers.Contract(nftmarketplaceaddress, Market.abi, provider)
     const data = await marketContract.fetchMarketItems()
 
       const items = await Promise.all(data.map(async i => {
@@ -49,7 +49,7 @@ export default function Home() {
    const provider = new ethers.provider.Web3Provider(connection)
 
    const signer = provider.getsigner()
-   const contract = new ethers.contract(nftmarketaddress, Market.abi, signer)
+   const contract = new ethers.contract(nftmarketplaceaddress, Market.abi, signer)
 
    const price = ethers.utils.parseUnits(nft.price.toString(), 'ether')
 
@@ -88,4 +88,5 @@ export default function Home() {
         </div>
      </div>
   </div>
+  )
 }
