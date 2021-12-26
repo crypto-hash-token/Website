@@ -10,14 +10,18 @@ import {
 import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
 import Market from '../artifacts/contracts/HASHMarket.sol/HASHMarket.json'
 
+let rpcEndpoint = null
+
+if (process.env.NEXT_PUBLIC_WORKSPACE_URL) {
+  rpcEndpoint = process.env.NEXT_PUBLIC_WORKSPACE_URL
+}
+
 export default function Home() {
   const [nfts, setNfts] = useState([])
   const [loadingState, setLoadingState] = useState('not-loaded')
-
   useEffect(() => {
     loadNFTs()
   }, [])
-
   async function loadNFTs() {
     const provider = new ethers.providers.JsonRpcProvider()
     const tokenContract = new ethers.Contract(nftaddress, NFT.abi, provider)
@@ -42,28 +46,21 @@ export default function Home() {
       setNfts(items)
       setLoadingState('loaded')
   }
-
  async function buyNft(nft) {
    const web3Modal = new Web3Modal()
    const connection = await web3Modal.connect()
    const provider = new ethers.provider.Web3Provider(connection)
-
    const signer = provider.getsigner()
    const contract = new ethers.contract(nftmarketplaceaddress, Market.abi, signer)
 
    const price = ethers.utils.parseUnits(nft.price.toString(), 'ether')
-
    const transaction = await contract.createMarketSale(nftaddress, nft.tokenId, {
      value: price
    })
    await transaction.wait()
-   loadNFts()
+   loadNFTs()
  }
-
-  if (loadingState == 'loaded' && !nfts.length) return (
-    <h1 className="px-20 py-10 text-3xl">No items in Marketplace</h1>
-  )
-
+  if (loadingState == 'loaded' && !nfts.length) return (<h1 className="px-20 py-10 text-3xl">No items in Marketplace</h1>)
   return (
     <div className="flex justify-cetner">
       <div className="pc-4" style={{ maxWidth: '1600px'}}>
