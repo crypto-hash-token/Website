@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
               Home
             </a>
           </Link>
-          <Link href="/creator-dashboard">
+          <Link href="/redeem">
             <a className="mr-6 text-pink-500">
               Redeem
             </a>
