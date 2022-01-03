@@ -7,8 +7,8 @@ import {
   nftmarketplaceaddress, nftaddress
 } from '../config'
 
-import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
 import Market from '../artifacts/contracts/HASHMarket.sol/HASHMarket.json'
+import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
 
 export default function CreatorDashboard() {
   const [nfts, setNfts] = useState([])
@@ -18,10 +18,7 @@ export default function CreatorDashboard() {
     loadNFTs()
   }, [])
   async function loadNFTs() {
-    const web3Modal = new Web3Modal( {
-      network: "mainnet",
-      cacheProvider: true,
-    })
+    const web3Modal = new Web3Modal()
     const connection = await web3Modal.connect()
     const provider = new ethers.providers.Web3Provider(connection)
     const signer = provider.getSigner()
@@ -44,7 +41,7 @@ export default function CreatorDashboard() {
       }
       return item
     }))
-
+    /* create a filtered array of items that have been sold */
       const soldItems = item.filter(i => i.sold)
       setSold(soldItems)
       setNfts(items)

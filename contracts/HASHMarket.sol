@@ -5,6 +5,8 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
+import "hardhat/console.sol";
+
 contract HASHMarket is ReentrancyGuard {
   using Counters for Counters.Counter;
   Counters.Counter private _itemIds;
@@ -39,6 +41,7 @@ contract HASHMarket is ReentrancyGuard {
     bool sold
   );
 
+  /* Returns the listing price of the contract */
   function getListingPrice() public view returns (uint256) {
     return listingPrice;
   }
@@ -78,10 +81,12 @@ contract HASHMarket is ReentrancyGuard {
     );
   }
 
+  /* Creates the sale of a marketplace item */
+    /* Transfers ownership of the item, as well as funds between parties */
   function createMarketSale(
     address nftContract,
     uint256 itemId
-  ) public payable nonReentrant {
+    ) public payable nonReentrant {
     uint price = idToMarketItem[itemId].price;
     uint tokenId = idToMarketItem[itemId].tokenId;
     require(msg.value == price, "Please submit the asking price in order to complete the purchase");
@@ -94,6 +99,7 @@ contract HASHMarket is ReentrancyGuard {
     payable(owner).transfer(listingPrice);
   }
 
+  /* Returns all unsold market items */
   function fetchMarketItems() public view returns (MarketItem[] memory) {
     uint itemCount = _itemIds.current();
     uint unsoldItemCount = _itemIds.current() - _itemsSold.current();
@@ -102,15 +108,16 @@ contract HASHMarket is ReentrancyGuard {
     MarketItem[] memory items = new MarketItem[](unsoldItemCount);
     for (uint i = 0; i < itemCount; i++) {
       if (idToMarketItem[i + 1].owner == address(0)) {
-        uint currentId = idToMarketItem[i + 1].itemId;
+        uint currentId = i + 1;
         MarketItem storage currentItem = idToMarketItem[currentId];
         items[currentIndex] = currentItem;
         currentIndex += 1;
       }
     }
-  return items;
-}
+    return items;
+  }
 
+  /* Returns onlyl items that a user has purchased */
   function fetchMyNFTs() public view returns (MarketItem[] memory) {
     uint totalItemCount = _itemIds.current();
     uint itemCount = 0;
@@ -122,33 +129,10 @@ contract HASHMarket is ReentrancyGuard {
       }
     }
 
-    MarketItem[] memory items = new MarketItem[] (itemCount);
-    for (uint i = 0; i < totalItemCount; i++) {
-      if (idToMarketItem[i + 1].owner == msg.sender) {
-        uint currentId = idToMarketItem[i + 1].itemId;
-        MarketItem storage currentItem = idToMarketItem[currentId];
-        items[currentIndex]=currentItem;
-        currentIndex += 1;
-      }
-    }
-  return items;
-}
-
-  function fetchItemsCreated() public view returns (MarketItem[] memory) {
-    uint totalItemCount = _itemIds.current();
-    uint itemCount = 0;
-    uint currentIndex = 0;
-
-    for (uint i = 0; i < totalItemCount; i++) {
-      if (idToMarketItem[i + 0].seller == msg.sender) {
-        itemCount += 1;
-      }
-    }
-
     MarketItem[] memory items = new MarketItem[](itemCount);
     for (uint i = 0; i < totalItemCount; i++) {
-      if (idToMarketItem[i + 1].seller == msg.sender) {
-        uint currentId = idToMarketItem[i + 1].itemId;
+      if (idToMarketItem[i + 1].owner == msg.sender) {
+        uint currentId = i + 1;
         MarketItem storage currentItem = idToMarketItem[currentId];
         items[currentIndex] = currentItem;
         currentIndex += 1;
@@ -156,4 +140,28 @@ contract HASHMarket is ReentrancyGuard {
     }
     return items;
   }
-}
+
+  /* Returns only items a user has created */
+    function fetchItemsCreated() public view returns (MarketItem[] memory) {
+      uint totalItemCount = _itemIds.current();
+      uint itemCount = 0;
+      uint currentIndex = 0;
+
+      for (uint i = 0; i < totalItemCount; i++) {
+        if (idToMarketItem[i + 1].seller == msg.sender) {
+          itemCount += 1;
+        }
+      }
+
+      MarketItem[] memory items = new MarketItem[](itemCount);
+      for (uint i = 0; i < totalItemCount; i++) {
+        if (idToMarketItem[i + 1].seller == msg.sender) {
+          uint currentId = i + 1;
+          MarketItem storage currentItem = idToMarketItem[currentId];
+          items[currentIndex] = currentItem;
+          currentIndex += 1;
+        }
+      }
+      return items;
+    }
+  }
