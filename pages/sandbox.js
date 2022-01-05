@@ -68,6 +68,8 @@ export default function Home() {
         </div>
       </section>
 
+      Add Footer Twitter - Discord - IG
+
      </>
    )
  }
