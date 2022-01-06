@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'D3';
+    src:url('/fonts/D3/D3-LiteBitMapism-Bold.ttf.woff') format('woff'),
+        url('/fonts/D3/D3-LiteBitMapism-Bold.ttf.svg#D3-LiteBitMapism-Bold') format('svg'),
+        url('/fonts/D3/D3-LiteBitMapism-Bold.ttf.eot'),
+        url('/fonts/D3/D3-LiteBitMapism-Bold.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}

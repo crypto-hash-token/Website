@@ -17,7 +17,7 @@ export default function Home() {
             <div class="row">
               <div class="col-12 col-lg-4"></div>
             <div class="col-12 col-lg-8">
-          <p class="text-black h2 text-center text-md-left">
+          <p class="text-black h2 text-center text-lg font-D3">
           "Crypto Hash is a Fair Launch Project and the Worlds First “Smoke to Earn” community Token. We are integrating unique technology to provide an alternative experience to crypto and cannabis users across the globe. HASH is Earned by redeeming Authentic Crypto Hash products sold only by our Authorized Retailers. Join us as we embark on a ride to the moon and beyond, oh and don’t forget to bring your robot!"
         </p>
             </div>
@@ -30,39 +30,39 @@ export default function Home() {
           <div class="row">
             <div class="col-12 col-lg-4"></div>
             <div class="col-12 col-lg-8">
-              <h2 class="text-black mb-5 text-center text-lg-left">Roadmap</h2>
+              <h2 class="text-black mb-5 text-center text-6xl text-bold font-D3">ROADMAP</h2>
             </div>
           </div>
           <div class="row text-black mb-4">
-            <div class="col-12 col-md-4 text-center text-md-right">
-              <h3 class="h1">Stage 1</h3>
+            <div class="col-12 col-md-4 text-center text-xl text-bold font-D3">
+              <h3 class="h1">STAGE 1</h3>
             </div>
             <div class="col-12 col-md-8">
-              <p class="stage py-1 h2 pl-md-5 text-center text-md-left">Produce Crypto Hash Joints</p>
+              <p class="stage py-1 h2 pl-md-5 text-center text-lg font-D3">Produce Crypto Hash Joints</p>
             </div>
           </div>
           <div class="row text-black mb-4">
-            <div class="col-12 col-md-4 text-center text-md-right">
-              <h3 class="h1">Stage 2</h3>
+            <div class="col-12 col-md-4 text-center text-xl text-bold font-D3">
+              <h3 class="h1">STAGE 2</h3>
             </div>
             <div class="col-12 col-md-8">
-              <p class="stage py-1 h2 pl-md-5 text-center text-md-left">Deploy CryptoHash Bonding Curve</p>
+              <p class="stage py-1 h2 pl-md-5 text-center text-lg font-D3">Deploy CryptoHash Bonding Curve</p>
             </div>
           </div>
           <div class="row text-black mb-4">
-            <div class="col-12 col-md-4 text-center text-md-right">
-              <h3 class="h1">Stage 3</h3>
+            <div class="col-12 col-md-4 text-center text-xl text-bold font-D3">
+              <h3 class="h1">STAGE 3</h3>
             </div>
             <div class="col-12 col-md-8">
-              <p class="stage py-1 h2 pl-md-5 text-center text-md-left">Distribute Products to Partner Retailers</p>
+              <p class="stage py-1 h2 pl-md-5 text-center text-lg font-D3">Distribute Products to Partner Retailers</p>
             </div>
           </div>
           <div class="row text-black mb-4">
-            <div class="col-12 col-md-4 text-center text-md-right">
-              <h3 class="h1">Stage 4</h3>
+            <div class="col-12 col-md-4 text-center text-xl text-bold font-D3">
+              <h3 class="h1">STAGE 4</h3>
             </div>
             <div class="col-12 col-md-8">
-              <p class="stage last py-1 h2 pl-md-5 text-center text-md-left">Launch Crypto Hash Marketplace & NFT Drops</p>
+              <p class="stage last py-1 h2 pl-md-5 text-center text-lg font-D3">Launch Crypto Hash Marketplace & NFT Drops</p>
             </div>
           </div>
         </div>
