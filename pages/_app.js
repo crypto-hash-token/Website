@@ -17,29 +17,14 @@ function MyApp({ Component, pageProps }) {
               Redeem
             </a>
           </Link>
-          <Link href="/mint">
+          <Link href="/create-item">
             <a className="mr-6 text-pink-500">
-              Mint
-            </a>
-          </Link>
-          <Link href="/marketplace">
-            <a className="mr-6 text-pink-500">
-              Marketplace
+              Sell Digital Asset
             </a>
           </Link>
           <Link href="/my-assets">
             <a className="mr-6 text-pink-500">
               My Digital Asset
-            </a>
-          </Link>
-          <Link href="/sandbox">
-            <a className="mr-6 text-pink-500">
-              Sandbox
-            </a>
-          </Link>
-          <Link href="/create-item">
-            <a className="mr-6 text-pink-500">
-              Sell Digital Asset
             </a>
           </Link>
           <Link href="/creator-dashboard">
