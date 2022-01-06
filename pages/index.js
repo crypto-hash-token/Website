@@ -30,39 +30,39 @@ export default function Home() {
           <div class="row">
             <div class="col-12 col-lg-4"></div>
             <div class="col-12 col-lg-8">
-              <h2 class="text-black mb-5 text-center text-lg-left">Roadmap</h2>
+              <h2 class="text-black mb-5 text-center text-6xl font-bold font-D3">Roadmap</h2>
             </div>
           </div>
           <div class="row text-black mb-4">
-            <div class="col-12 col-md-4 text-center text-md-right">
+            <div class="col-12 col-md-4 text-center text-2xl">
               <h3 class="h1">Stage 1</h3>
             </div>
             <div class="col-12 col-md-8">
-              <p class="stage py-1 h2 pl-md-5 text-center text-md-left">Produce Crypto Hash Joints</p>
+              <p class="stage py-1 h2 pl-md-5 text-center text-md">Produce Crypto Hash Joints</p>
             </div>
           </div>
           <div class="row text-black mb-4">
-            <div class="col-12 col-md-4 text-center text-md-right">
+            <div class="col-12 col-md-4 text-center text-2xl">
               <h3 class="h1">Stage 2</h3>
             </div>
             <div class="col-12 col-md-8">
-              <p class="stage py-1 h2 pl-md-5 text-center text-md-left">Deploy CryptoHash Bonding Curve</p>
+              <p class="stage py-1 h2 pl-md-5 text-center text-md">Deploy CryptoHash Bonding Curve</p>
             </div>
           </div>
           <div class="row text-black mb-4">
-            <div class="col-12 col-md-4 text-center text-md-right">
+            <div class="col-12 col-md-4 text-center text-2xl">
               <h3 class="h1">Stage 3</h3>
             </div>
             <div class="col-12 col-md-8">
-              <p class="stage py-1 h2 pl-md-5 text-center text-md-left">Distribute Products to Partner Retailers</p>
+              <p class="stage py-1 h2 pl-md-5 text-center text-md">Distribute Products to Partner Retailers</p>
             </div>
           </div>
           <div class="row text-black mb-4">
-            <div class="col-12 col-md-4 text-center text-md-right">
+            <div class="col-12 col-md-4 text-center text-2xl">
               <h3 class="h1">Stage 4</h3>
             </div>
             <div class="col-12 col-md-8">
-              <p class="stage last py-1 h2 pl-md-5 text-center text-md-left">Launch Crypto Hash Marketplace & NFT Drops</p>
+              <p class="stage last py-1 h2 pl-md-5 text-center text-md">Launch Crypto Hash Marketplace & NFT Drops</p>
             </div>
           </div>
         </div>
