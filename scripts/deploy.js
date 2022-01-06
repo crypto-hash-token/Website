@@ -1,16 +1,22 @@
+// We require the Hardhat Runtime Environment explicitly here. This is optional
+// but useful for running the script in a standalone fashion through `node <script>`.
+//
+// When running the script with `npx hardhat run <script>` you'll find the Hardhat
+// Runtime Environment's members available in the global scope.
 const hre = require("hardhat");
-const fs = require('fs');
 
 async function main() {
+
   const HASHMarket = await hre.ethers.getContractFactory("HASHMarket");
   const hashMarket = await HASHMarket.deploy();
   await hashMarket.deployed();
-  console.log("hashMarket deployed to:", hashMarket.address);
+  console.log("HASHMarket deployed to:", hashMarket.address);
 
   const NFT = await hre.ethers.getContractFactory("NFT");
   const nft = await NFT.deploy(hashMarket.address);
   await nft.deployed();
   console.log("nft deployed to:", nft.address);
+<<<<<<< HEAD
 
 let config = `
 export const nftmarketplaceaddress = "${nftMarket.nftaddress}"
@@ -20,11 +26,13 @@ export const nftaddress = "${nft.address}"
 let data = JSON.sting(config)
 fs.writeFileSync('config.js, JSON.parse(data)')
 
+=======
+>>>>>>> parent of 86bdd57 (Cleaned up some things)
 }
 
-main()
-  .then(() => process.exit(0))
-  .catch(error => {
+// We recommend this pattern to be able to use async/await everywhere
+// and properly handle errors.
+main().catch((error) => {
   console.error(error);
-  process.exit = (1);
+  process.exitCode = 1;
 });
