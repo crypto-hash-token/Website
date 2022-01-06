@@ -12,7 +12,7 @@ import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
 
 export default function CreatorDashboard() {
   const [nfts, setNfts] = useState([])
-  const [sold, setSOld] = useState([])
+  const [sold, setSold] = useState([])
   const [loadingState, setLoadingState] = useState('not-loaded')
   useEffect(() => {
     loadNFTs()

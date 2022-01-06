@@ -33,17 +33,17 @@ export default function CreateItem () {
       console.log(e)
     }
   }
-
   async function createItem() {
     const { name, description, price } = formInput
     if (!name || !description || !price || !fileUrl) return
+
     const data = JSON.stringify({
       name, description, image: fileUrl
     })
-
     try {
       const added = await client.add(data)
       const url = 'https://ipfs.infura.io/ipfs/${added.path}'
+
       createSale(url)
     } catch (error) {
       console.log('Error uploading files: ', error)
@@ -56,23 +56,22 @@ export default function CreateItem () {
     const provider = new ethers.providers.Web3Provider(connection)
     const signer = provider.getSigner()
 
+
     let contract = new ethers.Contract(nftaddress, NFT.abi, signer)
     let transaction = await contract.createToken(url)
     let tx = await transaction.wait()
-
     let event = tx.events[0]
     let value = event.args[2]
     let tokenId = value.toNumber()
 
     const price = ethers.utils.parseUnits(formInput.price, 'ether')
 
+
     contract = new ethers.Contract(nftmarketplaceaddress, Market.abi, signer)
     let listingPrice = await contract.getListingPrice()
     listingPrice = listingPrice.toString()
 
-    transaction = await contract.createMarketItem(
-      nftaddress, tokenId, price, { value: listingPrice }
-    )
+    transaction = await contract.createMarketItem(nftaddress, tokenId, price, { value: listingPrice })
     await transaction.wait()
     router.push('/')
   }
@@ -106,10 +105,7 @@ export default function CreateItem () {
             <img className="rounded mt-4" width="350" src={fileUrl} />
           )
         }
-        <button
-          onClick={createItem}
-          className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg"
-        >
+        <button onClick={createItem} className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg">
           Create Digital Asset
         </button>
       </div>
