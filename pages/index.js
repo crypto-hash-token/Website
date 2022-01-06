@@ -5,6 +5,7 @@ import Web3Modal from 'web3modal'
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Image from 'next/image'
 import cryptoHash from '../public/grid.png'
 =======
@@ -163,6 +164,33 @@ export default function Home() {
     const marketContract = new ethers.Contract(nftmarketplaceaddress, Market.abi, provider)
     const data = await marketContract.fetchMarketItems()
 
+=======
+import {
+  nftaddress, nftmarketplaceaddress
+} from '../config'
+
+import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
+import Market from '../artifacts/contracts/HASHMarket.sol/HASHMarket.json'
+
+let rpcEndpoint = null
+
+if (process.env.NEXT_PUBLIC_WORKSPACE_URL) {
+  rpcEndpoint = process.env.NEXT_PUBLIC_WORKSPACE_URL
+}
+
+export default function Home() {
+  const [nfts, setNfts] = useState([])
+  const [loadingState, setLoadingState] = useState('not-loaded')
+  useEffect(() => {
+    loadNFTs()
+  }, [])
+  async function loadNFTs() {
+    const provider = new ethers.providers.JsonRpcProvider()
+    const tokenContract = new ethers.Contract(nftaddress, NFT.abi, provider)
+    const marketContract = new ethers.Contract(nftmarketplaceaddress, Market.abi, provider)
+    const data = await marketContract.fetchMarketItems()
+
+>>>>>>> parent of 864a1f1 (Updated Home Page and Added Mint Page)
       const items = await Promise.all(data.map(async i => {
         const tokenUri = await tokenContract.tokenURI(i.tokenId)
         const meta = await axios.get(tokenUri)
