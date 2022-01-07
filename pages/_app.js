@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
           </Link>
           <Link href="/redeem">
             <a className="mr-6 text-pink-500 font-D3">
-              Redeem
+               Redeem
             </a>
           </Link>
           <Link href="/mint">

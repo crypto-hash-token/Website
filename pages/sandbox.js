@@ -9,21 +9,26 @@ export default function Home() {
   return (
     <>
 
-       <section id="Header bg-black">
-        <div class="container bg-black">
-          <div class="translate-x-100">
+       <section id="Header">
+       <div>
+        <image class="bg-black py-5 rotate-30 translate-x-100" src="../public/grid.png">  </image>
+       </div>
+        <div class="bg-black py-5 row-span-2 rotate-30 translate-x-100">
+          <div>
             <Image
               src={cryptoHash}
               width={1000}
               height={225}
             />
           </div>
-          <div class="-translate-x-100">
-            <Image
-              src={cryptoHash}
-              width={1000}
-              height={225}
-            />
+          <div class="bg-black py-5 row-span-2 rotate-30 -translate-x-100">
+            <div>
+              <Image
+                src={cryptoHash}
+                width={1000}
+                height={225}
+                />
+            </div>
           </div>
         </div>
       </section>
