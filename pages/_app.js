@@ -4,8 +4,8 @@ import Link from 'next/link'
 function MyApp({ Component, pageProps }) {
   return (
     <div>
-      <nav className="boarder-b p-6">
-        <p className="text-4xl font-bold">CRYPTO HASH</p>
+      <nav className="boarder-b p-6 bg-black text-center">
+        <p className="text-8xl font-bold text-white font-D3 text-center">CRYPTO HASH</p>
         <div className="flex mt-4">
           <Link href="/">
             <a className="mr-6 text-pink-500">
