@@ -9,6 +9,15 @@ module.exports = {
          fontFamily: {
              D3: [ "D3" ],
          },
+         translate: {
+        '': 'rem',
+      },
+      rotate: {
+       '10': '10deg',
+     },
+     gridRow: {
+        'span-2': 'span 2 / span 2',
+      },
  },
     },
     variants: {
