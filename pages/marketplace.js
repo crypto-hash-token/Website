@@ -60,7 +60,7 @@ export default function Marketplace() {
    await transaction.wait()
    loadNFTs()
  }
-  if (loadingState == 'loaded' && !nfts.length) return (<h1 className="px-20 py-10 text-3xl">No items in Marketplace</h1>)
+  if (loadingState == 'loaded' && !nfts.length) return (<h1 className="px-20 py-10 text-yellow-400 text-3xl font-D3">No items in Marketplace</h1>)
   return (
     <div className="flex justify-cetner">
       <div className="pc-4" style={{ maxWidth: '1600px'}}>

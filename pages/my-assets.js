@@ -43,7 +43,7 @@ export default function MyAssets() {
     setLoadingState('loaded')
   }
   if (loadingState == 'loaded' && !nfts.length) return (
-    <h1 className="py-10 px-20 text-3x1">No Assets Owned</h1>
+    <h1 className="py-10 px-20 text-yellow-400 text-3xl font-D3">No Assets Owned</h1>
   )
   return (
     <div className="flex justify-center">

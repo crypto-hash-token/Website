@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
+    <div className="bg-black">
       <nav className="boarder-b p-6 bg-black text-center">
         <p className="text-8xl font-bold text-yellow-400 font-D3 text-center pt-10 pb-10">CRYPTO HASH</p>
         <div className="flex mt-4 justify-center">

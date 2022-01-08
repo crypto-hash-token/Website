@@ -4,6 +4,7 @@ import { Web3Modal } from 'web3modal'
 
 import Image from 'next/image'
 import cryptoHash from '../public/grid.png'
+import cryptoHashLong from '../public/gridLong.png'
 import discord from '../public/Discord.png'
 import twitter from '../public/Twitter.png'
 import discordHover from '../public/DiscordHover.png'
@@ -14,20 +15,22 @@ export default function Home() {
     <>
 
     <section id="Header">
-     <div class="bg-black">
+     <div class="flex flex-col justify-center items-center bg-black py-5">
        <div class="-rotate-5 py-5 row-span-3 row-start-3 translate-x-75">
          <Image
-           src={cryptoHash}
-           width={1000}
+           src={cryptoHashLong}
+           width={2000}
            height={225}
+           layout="fixed"
          />
        </div>
        <div class="bg-black">
          <div class="-rotate-5 py-5 row-span-3 -translate-x-50">
            <Image
-             src={cryptoHash}
-             width={1000}
+             src={cryptoHashLong}
+             width={2000}
              height={225}
+             layout="fixed"
              />
          </div>
        </div>
@@ -90,9 +93,9 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="flex flex-col justify-center items-center bg-black">
+      <footer className="flex flex-col justify-center items-center bg-black pt-5">
         <div>
-          <div class="items-center">
+          <div>
             <Image
               src={twitter}
               width={100}
@@ -105,8 +108,8 @@ export default function Home() {
             />
          </div>
         </div>
-        <div class="col-12 col-md-8">
-          <p class="stage last py-1 h2 pl-md-5 text-white text-center text-sm font-D3">2022 crypto-hash.io All Rights Reserved</p>
+        <div class="col-12 col-md-8 pb-3">
+          <p class="stage last py-5 h2 pl-md-5 text-white text-center text-sm font-D3">2022 crypto-hash.io All Rights Reserved</p>
         </div>
        </footer>
 

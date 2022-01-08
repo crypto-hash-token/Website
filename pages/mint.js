@@ -54,7 +54,7 @@ export default function CreateItem () {
   }
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center bg-black">
       <div className="w-1/2 flex flex-col pb-12">
         <button onClick={createItem} className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg">
           Connet Wallet
