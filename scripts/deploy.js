@@ -16,7 +16,6 @@ async function main() {
   const nft = await NFT.deploy(hashMarket.address);
   await nft.deployed();
   console.log("nft deployed to:", nft.address);
-<<<<<<< HEAD
 
 let config = `
 export const nftmarketplaceaddress = "${nftMarket.nftaddress}"
@@ -25,9 +24,6 @@ export const nftaddress = "${nft.address}"
 
 let data = JSON.sting(config)
 fs.writeFileSync('config.js, JSON.parse(data)')
-
-=======
->>>>>>> parent of 86bdd57 (Cleaned up some things)
 }
 
 // We recommend this pattern to be able to use async/await everywhere

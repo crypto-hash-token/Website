@@ -47,7 +47,7 @@ export default function Marketplace() {
           name: meta.data.name,
           description: meta.data.description,
         }
-        return Item
+        return item
       }))
       setNfts(items)
       setLoadingState('loaded')
@@ -68,7 +68,7 @@ export default function Marketplace() {
  }
   if (loadingState == 'loaded' && !nfts.length) return (
   <>
-  <h1 className="flex flex-col justify-center items-center px-20 py-10 text-yellow-400 text-3xl font-D3">No items in Marketplace</h1>
+    <h1 className="flex flex-col justify-center items-center px-20 py-10 text-yellow-400 text-3xl font-D3">No items in Marketplace</h1>
 
   <footer className="flex flex-col justify-center items-center bg-black pt-5">
     <div>

@@ -2,6 +2,9 @@ import { useState } from 'react'
 import { ethers } from 'ethers'
 import { Web3Modal } from 'web3modal'
 
+import Link from 'next/link'
+import Mint from './mint'
+
 import Image from 'next/image'
 import cryptoHash from '../public/grid.png'
 import cryptoHashLong from '../public/gridLong.png'
@@ -89,6 +92,16 @@ export default function Home() {
             <div class="col-12 col-md-8 pb-5">
               <p class="stage last py-1 h2 pl-md-5 text-center text-lg font-D3 text-white">Launch Crypto Hash Marketplace & NFT Drops</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="Button">
+        <div className="flex justify-center bg-black">
+          <div className="w-1/2 flex flex-col pb-12">
+            <button href="/mint" className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg">
+              MINT
+            </button>
           </div>
         </div>
       </section>
