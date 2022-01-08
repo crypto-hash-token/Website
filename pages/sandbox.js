@@ -10,8 +10,8 @@ export default function Home() {
     <>
 
        <section id="Header">
-        <div class="bg-black">
-          <div class="-rotate-10 py-5 row-span-2 translate-x-75">
+        <div class="bg-black grid-rows-2">
+          <div class="-rotate-5 py-5 row-span-3 grid-rows-2">
             <Image
               src={cryptoHash}
               width={1000}
@@ -19,7 +19,7 @@ export default function Home() {
             />
           </div>
           <div class="bg-black">
-            <div class="-rotate-10 py-5 row-span-2 -translate-x-50">
+            <div class="-rotate-5 py-5 row-span-3 -translate-x-50">
               <Image
                 src={cryptoHash}
                 width={1000}

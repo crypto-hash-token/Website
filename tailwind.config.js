@@ -9,14 +9,20 @@ module.exports = {
          fontFamily: {
              D3: [ "D3" ],
          },
+         spacing: {
+        '60': '15rem',
+        },
          translate: {
-        '': 'rem',
-      },
-      rotate: {
-       '10': '10deg',
-     },
-     gridRow: {
-        'span-2': 'span 2 / span 2',
+        '60': '15 rem',
+        },
+         rotate: {
+       '5': '5deg',
+        },
+        gridTemplateRows: {
+       // Simple 2 row grid
+       '2': 'repeat(2, minmax(0, 1fr))',
+       // Complex site-specific row configuration
+       'layout': '1000px minmax(1000px, 1fr) 225px',
       },
  },
     },
