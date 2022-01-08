@@ -3,6 +3,12 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Web3Modal from 'web3modal'
 
+import Image from 'next/image'
+import discord from '../public/Discord.png'
+import twitter from '../public/Twitter.png'
+import discordHover from '../public/DiscordHover.png'
+import twitterHover from '../public/TwitterHover.png'
+
 import {
   nftaddress, nftmarketplaceaddress
 } from '../config'
@@ -60,8 +66,34 @@ export default function Marketplace() {
    await transaction.wait()
    loadNFTs()
  }
-  if (loadingState == 'loaded' && !nfts.length) return (<h1 className="px-20 py-10 text-yellow-400 text-3xl font-D3">No items in Marketplace</h1>)
+  if (loadingState == 'loaded' && !nfts.length) return (
+  <>
+  <h1 className="flex flex-col justify-center items-center px-20 py-10 text-yellow-400 text-3xl font-D3">No items in Marketplace</h1>
+
+  <footer className="flex flex-col justify-center items-center bg-black pt-5">
+    <div>
+      <div>
+        <Image
+          src={twitter}
+          width={100}
+          height={100}
+        />
+        <Image
+          src={discord}
+          width={100}
+          height={100}
+        />
+     </div>
+    </div>
+    <div class="col-12 col-md-8 pb-3">
+      <p class="stage last py-5 h2 pl-md-5 text-white text-center text-sm font-D3">2022 crypto-hash.io All Rights Reserved</p>
+    </div>
+   </footer>
+
+  </>
+)
   return (
+  <>
     <div className="flex justify-cetner">
       <div className="pc-4" style={{ maxWidth: '1600px'}}>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
@@ -85,5 +117,27 @@ export default function Marketplace() {
         </div>
      </div>
   </div>
+
+  <footer className="flex flex-col justify-center items-center bg-black pt-5">
+    <div>
+      <div>
+        <Image
+          src={twitter}
+          width={100}
+          height={100}
+        />
+        <Image
+          src={discord}
+          width={100}
+          height={100}
+        />
+     </div>
+    </div>
+    <div class="col-12 col-md-8 pb-3">
+      <p class="stage last py-5 h2 pl-md-5 text-white text-center text-sm font-D3">2022 crypto-hash.io All Rights Reserved</p>
+    </div>
+   </footer>
+
+  </>
   )
 }

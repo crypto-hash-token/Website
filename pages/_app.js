@@ -32,21 +32,6 @@ function MyApp({ Component, pageProps }) {
               My Digital Asset
             </a>
           </Link>
-          <Link href="/sandbox">
-            <a className="mr-6 text-pink-500 font-D3">
-              Sandbox
-            </a>
-          </Link>
-          <Link href="/create-item">
-            <a className="mr-6 text-pink-500 font-D3">
-              Sell Digital Asset
-            </a>
-          </Link>
-          <Link href="/creator-dashboard">
-            <a className="mr-6 text-pink-500 font-D3">
-              Creator Dashboard
-            </a>
-          </Link>
         </div>
       </nav>
       <Component {...pageProps} />
@@ -55,3 +40,22 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp
+
+
+
+
+//<Link href="/sandbox">
+//  <a className="mr-6 text-pink-500 font-D3">
+//    Sandbox
+//  </a>
+//</Link>
+//<Link href="/create-item">
+//  <a className="mr-6 text-pink-500 font-D3">
+//    Sell Digital Asset
+//  </a>
+//</Link>
+//<Link href="/creator-dashboard">
+//  <a className="mr-6 text-pink-500 font-D3">
+//    Creator Dashboard
+//  </a>
+//</Link>

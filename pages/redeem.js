@@ -2,8 +2,67 @@ import { useState } from 'react'
 import { ethers } from 'ethers'
 import { Web3Modal } from 'web3modal'
 
+import Image from 'next/image'
+import HASHToken from '../public/HASHToken.png'
+import discord from '../public/Discord.png'
+import twitter from '../public/Twitter.png'
+import discordHover from '../public/DiscordHover.png'
+import twitterHover from '../public/TwitterHover.png'
+
 export default function Redeem() {
   return (
-  <h1 className="py-10 px-20 text-yellow-400 text-3xl font-D3">Redeem</h1>
+    <>
+    <section id="Head">
+      <div class="bg-black px-20 pt-10">
+       <p class="flex flex-col justify-center items-center py-10 px-20 text-yellow-400 text-3xl font-D3">
+        REDEEM
+       </p>
+      </div>
+   </section>
+
+   <section id="Capture">
+    <div class="flex flex-col justify-center items-center bg-black">
+      <div class="">
+        <Image
+          src={HASHToken}
+          width={333}
+          height={333}
+          layout="fixed"
+        />
+      </div>
+     </div>
+   </section>
+
+   <section id="Button">
+    <div className="flex justify-center bg-black">
+      <div className="w-1/2 flex flex-col pb-12">
+        <button onClick={Redeem} className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg">
+          Coming Soon...
+        </button>
+      </div>
+    </div>
+   </section>
+
+   <footer className="flex flex-col justify-center items-center bg-black pt-5">
+     <div>
+       <div>
+         <Image
+           src={twitter}
+           width={100}
+           height={100}
+         />
+         <Image
+           src={discord}
+           width={100}
+           height={100}
+         />
+      </div>
+     </div>
+     <div class="col-12 col-md-8 pb-3">
+       <p class="stage last py-5 h2 pl-md-5 text-white text-center text-sm font-D3">2022 crypto-hash.io All Rights Reserved</p>
+     </div>
+    </footer>
+
+   </>
   )
 }
