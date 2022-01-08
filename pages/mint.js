@@ -69,12 +69,12 @@ export default function CreateItem () {
        </h1>
       </div>
       <div>
-        <p class="flex flex-col justify-center items-center pb-5 text-white text-lg font-D3">
+        <p class="flex flex-col justify-center items-center pb-5 text-yellow-400 text-lg font-D3">
          250 ERC 1155 Assets Redeemable for FREE Mint dunring Whitelist Sale
         </p>
       </div>
       <div>
-      <h2 class="flex flex-col justify-center items-center pb-3 text-white text-2xl font-D3">
+      <h2 class="flex flex-col justify-center items-center text-yellow-400 text-2xl font-D3">
        .08 ETH Each
       </h2>
      </div>
