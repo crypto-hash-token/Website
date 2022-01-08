@@ -37,7 +37,7 @@ export default function Redeem() {
     <div className="flex justify-center bg-black">
       <div className="w-1/2 flex flex-col pb-12">
         <button onClick={Redeem} className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg">
-          Coming Soon...
+          Coming Soon
         </button>
       </div>
     </div>

@@ -74,7 +74,7 @@ export default function CreateItem () {
         </p>
       </div>
       <div>
-      <h2 class="flex flex-col justify-center items-center text-white text-2xl font-D3">
+      <h2 class="flex flex-col justify-center items-center text-white pb-3 text-2xl font-D3">
        .08 ETH Each
       </h2>
      </div>
@@ -93,11 +93,20 @@ export default function CreateItem () {
       </div>
     </section>
 
+        <section id="Selector">
+          <div className="flex justify-center">
+            <input
+              placeholder="Qty, Limit 2 per Wallet"
+              className="mt-8 border rounded p-4 bg-pink-200 text-center"
+            />
+          </div>
+        </section>
+
     <section id="Button">
       <div className="flex justify-center bg-black">
         <div className="w-1/2 flex flex-col pb-12">
           <button onClick={createItem} className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg">
-            Connet Wallet
+            Coming Soon
           </button>
         </div>
       </div>
