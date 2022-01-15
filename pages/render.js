@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { ethers } from 'ethers'
 import { Web3Modal } from 'web3modal'
+import ARjs from 'ar.js'
 
 import Image from 'next/image'
 import HASHToken from '../public/HASHToken.png'
@@ -12,6 +13,8 @@ import twitterHover from '../public/TwitterHover.png'
 export default function Render() {
   return (
     <>
+
+    {/*
     <section id="Head">
       <div class="bg-black px-20 pt-10">
        <p class="flex flex-col justify-center items-center py-10 px-20 text-yellow-400 text-3xl font-D3">
@@ -92,7 +95,7 @@ export default function Render() {
        <p class="stage last py-5 h2 pl-md-5 text-white text-center text-sm font-D3">2022 crypto-hash.io All Rights Reserved</p>
      </div>
     </footer>
-
+*/}
    </>
   )
 }

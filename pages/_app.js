@@ -32,11 +32,6 @@ function MyApp({ Component, pageProps }) {
               My Digital Asset
             </a>
           </Link>
-          <Link href="/render">
-            <a className="mr-6 text-pink-500 font-D3">
-               Render
-            </a>
-          </Link>
         </div>
       </nav>
       <Component {...pageProps} />
@@ -62,5 +57,10 @@ export default MyApp
 //<Link href="/creator-dashboard">
 //  <a className="mr-6 text-pink-500 font-D3">
 //    Creator Dashboard
+//  </a>
+//</Link>
+//<Link href="/render">
+//  <a className="mr-6 text-pink-500 font-D3">
+//     Render
 //  </a>
 //</Link>
