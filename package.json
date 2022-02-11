@@ -8,23 +8,24 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@nomiclabs/hardhat-ethers": "^2.0.3",
+    "@nomiclabs/hardhat-ethers": "^2.0.4",
     "@nomiclabs/hardhat-etherscan": "^2.1.8",
-    "@nomiclabs/hardhat-waffle": "^2.0.1",
-    "@openzeppelin/contracts": "^4.4.1",
+    "@nomiclabs/hardhat-waffle": "^2.0.2",
+    "@openzeppelin/contracts": "^4.5.0",
     "axios": "^0.24.0",
-    "chai": "^4.3.4",
+    "chai": "^4.3.6",
     "dotenv": "^10.0.0",
     "ethereum-waffle": "^3.4.0",
-    "ethers": "^5.5.2",
-    "hardhat": "^2.8.0",
+    "ethers": "^5.5.4",
+    "git": "^0.1.5",
+    "hardhat": "^2.8.3",
     "hardhat-gas-reporter": "^1.0.6",
     "ipfs-http-client": "^55.0.0",
     "next": "12.0.7",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "solidity-coverage": "^0.7.17",
-    "web3modal": "^1.9.4"
+    "web3modal": "^1.9.5"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.0",
