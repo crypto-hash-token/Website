@@ -1,7 +1,5 @@
 import { useState } from 'react'
-import { ethers, BN } from 'ethers'
-import { create as ipfsHttpClient } from 'ipfs-Http-Client'
-import { useRouter } from 'next/router'
+import { ethers } from 'ethers'
 import Web3Modal from 'web3modal'
 
 import Image from 'next/image'
@@ -26,12 +24,19 @@ export default function MintPass () {
     const signer = provider.getSigner();
     const mintPassContract = await instantiateContract(signer);
     const { amount } = formInput
-    if (!amount) throw "specify the amount you want to mint ( 1 or 2 )"
-    let tx = await mintPassContract.mint(amount, { value: (amount * 8 + '0000000000000000')});
-    tx.wait();
-    if(tx) alert(`${amount} tokens minted successfull :)`)
-    if(!tx) alert(`transaction failed with error: ${tx.msg}`)
-    console.log({tx})
+    if (!amount || amount > 2 || amount == 0) {
+      alert("please specify either 1 or 2 as amount")
+      return;
+    }
+    try{
+      let tx = await mintPassContract.mint(amount, { value: (amount * 8 + '0000000000000000')});
+      tx.wait();
+      if(tx) alert(`${amount} tokens minted successfull :)`)
+      if(!tx) alert(`transaction failed with error: ${tx.msg}`)
+      console.log({tx})   
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   async function instantiateContract(signer) {
@@ -96,16 +101,21 @@ export default function MintPass () {
     <footer className="flex flex-col justify-center items-center bg-black pt-5">
       <div>
         <div>
-          <Image
-            src={twitter}
-            width={100}
-            height={100}
-          />
-          <Image
-            src={discord}
-            width={100}
-            height={100}
-          />
+          <a href="https://twitter.com/cryptohashtoken?s=21">
+            <Image
+              src={twitter}
+              width={100}
+              height={100}
+            />
+          </a>
+          <a href="https://discord.com/invite/JhJrKYkn">
+            <Image
+              src={discord}
+              width={100}
+              height={100}
+              longdesc="discord.gg"
+            />
+          </a>
        </div>
       </div>
       <div class="col-12 col-md-8 pb-3">
