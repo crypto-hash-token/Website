@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ethers } from 'ethers'
+import { ethers, BN } from 'ethers'
 import { create as ipfsHttpClient } from 'ipfs-Http-Client'
 import { useRouter } from 'next/router'
 import Web3Modal from 'web3modal'
@@ -11,38 +11,34 @@ import twitter from '../public/Twitter.png'
 import discordHover from '../public/DiscordHover.png'
 import twitterHover from '../public/TwitterHover.png'
 
-//import Mint from '../artifacts/contracts/MintPass.sol'
-
+import { abi } from '../artifacts/contracts/MintPass.sol/MintPass.json'
+import { mintpassaddress } from '../config'
 
 // for Presale 250 Editions of ERC-1155
 export default function MintPass () {
-  const [fileUrl, setFileUrl] = useState(null)
   const [formInput, updateFormInput] = useState({amount: ''})
-  const router = useRouter()
 
-  async function onChange(e) {
-    const file = e.target.files[0]
-  }
-  async function mintPass() {
-    const { amount } = formInput
-    if (!amount) return
-
-    const data = JSON.stringify({
-      amount
-    })
-    createMintPass(url)
-  }
-
-  async function createMintPass(url) {
+  async function mint() {
+    console.log(abi)
     const web3Modal = new Web3Modal()
     const connection = await web3Modal.connect()
     const provider = new ethers.providers.Web3Provider(connection)
-    const signer = provider.getSigner()
+    const signer = provider.getSigner();
+    const mintPassContract = await instantiateContract(signer);
+    const { amount } = formInput
+    if (!amount) throw "specify the amount you want to mint ( 1 or 2 )"
+    let tx = await mintPassContract.mint(amount, { value: (amount * 8 + '0000000000000000')});
+    tx.wait();
+    if(tx) alert(`${amount} tokens minted successfull :)`)
+    if(!tx) alert(`transaction failed with error: ${tx.msg}`)
+    console.log({tx})
+  }
 
-    let contract = new ethers.Contract(privateKey, MintPass.abi, signer)
-    let amount = await formInput.amount()
-
-    router.push('/')
+  async function instantiateContract(signer) {
+    console.log(mintpassaddress);
+    let contract = new ethers.Contract(mintpassaddress, abi, signer);
+    return contract;
+  }
 
   return (
   <>
@@ -90,7 +86,7 @@ export default function MintPass () {
     <section id="Button">
       <div className="flex justify-center bg-black">
         <div className="w-1/2 flex flex-col pb-12">
-          <button onClick={mintPass} className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg">
+          <button onClick={mint} className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg">
             Coming Soon
           </button>
         </div>

@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
                Redeem
             </a>
           </Link>
-          <Link href="/mint">
+          <Link href="/mintpass">
             <a className="mr-6 text-pink-500 font-D3">
               Mint
             </a>

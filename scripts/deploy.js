@@ -19,9 +19,15 @@ async function main() {
   console.log("nft deployed to:", nft.address);
 //  console.log(JSON.stringify({nft, hashMarket},null,2))
 
+const MintPassERC1155 = await hre.ethers.getContractFactory("MintPass");
+const MintPassDeployed = await MintPassERC1155.deploy();
+await MintPassDeployed.deployed();
+console.log("MintPassERC1155 deployed to:", MintPassDeployed.address);
+
 let config = `
 export const nftmarketplaceaddress = "${hashMarket.address}"
 export const nftaddress = "${nft.address}"
+export const mintpassaddress = "${MintPassDeployed.address}"
 `
 
 let data = JSON.stringify(config)
