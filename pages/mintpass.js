@@ -33,7 +33,7 @@ export default function MintPass () {
       tx.wait();
       if(tx) alert(`${amount} tokens minted successfull :)`)
       if(!tx) alert(`transaction failed with error: ${tx.msg}`)
-      console.log({tx})   
+      console.log({tx})
     } catch (err) {
       console.log(err);
     }
@@ -92,7 +92,7 @@ export default function MintPass () {
       <div className="flex justify-center bg-black">
         <div className="w-1/2 flex flex-col pb-12">
           <button onClick={mint} className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg">
-            Coming Soon
+            Coming Soon / MINT
           </button>
         </div>
       </div>
