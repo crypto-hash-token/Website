@@ -17,8 +17,12 @@ module.exports = {
       chainId: 1337
     },
     mumbai: {
-      url: 'https://mainnet.infura.io/v3/95b5b9a081d94021a5028b149874b1ef',
-      accounts: ["0x8526e61be67420a581ad5d1f41e0d5f27db48abe4e46b1537a9136d2662d40a4"]
+      url: 'https://polygon-mumbai.infura.io/v3/95b5b9a081d94021a5028b149874b1ef',
+      accounts: ["0xac89c17266ae6308c5099413557a3055dcd8cadea43ba5b53b02feced03363d4"]
+    },
+    gorli: {
+      url: 'https://goerli.infura.io/v3/95b5b9a081d94021a5028b149874b1ef',
+      accounts: ["0xac89c17266ae6308c5099413557a3055dcd8cadea43ba5b53b02feced03363d4"]
     },
   //  mainnet: {
   //    url: 'https://polygon-mainnet.infura.io/v3/${projectId}',

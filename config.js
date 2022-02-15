@@ -1,4 +1,4 @@
 
-export const nftmarketplaceaddress = "0xB7f8BC63BbcaD18155201308C8f3540b07f84F5e"
-export const nftaddress = "0xA51c1fc2f0D1a1b8494Ed1FE312d7C3a78Ed91C0"
-export const mintpassaddress = "0x0DCd1Bf9A1b36cE34237eEaFef220932846BCD82"
+export const nftmarketplaceaddress = "0xcC00257dC6dA945b7daDE3cbb5268C94ebe59B6b"
+export const nftaddress = "0x9f2f10Ea80Fd6c0B892d3eb9Ae6B621521af7960"
+export const mintpassaddress = "0xBCFd95Dc648Faa4d34f8B6c5038C03b7E2609536"

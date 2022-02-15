@@ -13,7 +13,7 @@ contract HASHMarket is ReentrancyGuard {
   Counters.Counter private _itemsSold;
 
   address payable owner;
-  uint256 listingPrice = 0.01 ether;
+  uint256 listingPrice = 10000000000000000;
 
   constructor() {
     owner = payable(msg.sender);
