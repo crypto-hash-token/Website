@@ -9,7 +9,7 @@ import twitter from '../public/Twitter.png'
 import discordHover from '../public/DiscordHover.png'
 import twitterHover from '../public/TwitterHover.png'
 
-import { abi } from '../artifacts/contracts/MintPass.sol/MintPass.json'
+import { abi } from '/artifacts/contracts/MintPass.sol/MintPass.json'
 import { mintpassaddress } from '../config'
 
 // for Presale 250 Editions of ERC-1155
