@@ -1,18 +1,18 @@
-import { useState } from 'react'
-import { ethers } from 'ethers'
-import { Web3Modal } from 'web3modal'
-import ARjs from 'ar.js'
+//import { useState } from 'react'
+//import { ethers } from 'ethers'
+//import { Web3Modal } from 'web3modal'
+//import ARjs from 'ar.js'
 
-import Image from 'next/image'
-import HASHToken from '../public/HASHToken.png'
-import discord from '../public/Discord.png'
-import twitter from '../public/Twitter.png'
-import discordHover from '../public/DiscordHover.png'
-import twitterHover from '../public/TwitterHover.png'
+//import Image from 'next/image'
+//import HASHToken from '../public/HASHToken.png'
+//import discord from '../public/Discord.png'
+//import twitter from '../public/Twitter.png'
+//import discordHover from '../public/DiscordHover.png'
+//import twitterHover from '../public/TwitterHover.png'
 
-export default function Render() {
-  return (
-    <>
+//export default function Render() {
+//  return (
+//    <>
 
     {/*
     <section id="Head">
@@ -96,6 +96,6 @@ export default function Render() {
      </div>
     </footer>
 */}
-   </>
-  )
-}
+//   </>
+//  )
+//}
