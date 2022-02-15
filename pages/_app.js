@@ -22,11 +22,6 @@ function MyApp({ Component, pageProps }) {
               Mint
             </a>
           </Link>
-    //      <Link href="/marketplace">
-    //        <a className="mr-6 text-pink-500 font-D3">
-    //          Marketplace
-    //        </a>
-    //      </Link>
           <Link href="/my-assets">
             <a className="mr-6 text-pink-500 font-D3">
               My Digital Asset
@@ -64,3 +59,8 @@ export default MyApp
 //     Render
 //  </a>
 //</Link>
+//      <Link href="/marketplace">
+//        <a className="mr-6 text-pink-500 font-D3">
+//          Marketplace
+//        </a>
+//      </Link>
