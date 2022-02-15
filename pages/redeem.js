@@ -13,16 +13,16 @@ export default function Redeem() {
   return (
     <>
     <section id="Head">
-      <div class="bg-black px-20 pt-10">
-       <p class="flex flex-col justify-center items-center py-10 px-20 text-yellow-400 text-3xl font-D3">
+      <div className="bg-black px-20 pt-10">
+       <p className="flex flex-col justify-center items-center py-10 px-20 text-yellow-400 text-3xl font-D3">
         REDEEM
        </p>
       </div>
    </section>
 
    <section id="Capture">
-    <div class="flex flex-col justify-center items-center bg-black">
-      <div class="">
+    <div className="flex flex-col justify-center items-center bg-black">
+      <div className="">
         <Image
           src={HASHToken}
           width={333}
@@ -58,8 +58,8 @@ export default function Redeem() {
          />
       </div>
      </div>
-     <div class="col-12 col-md-8 pb-3">
-       <p class="stage last py-5 h2 pl-md-5 text-white text-center text-sm font-D3">2022 crypto-hash.io All Rights Reserved</p>
+     <div className="col-12 col-md-8 pb-3">
+       <p className="stage last py-5 h2 pl-md-5 text-white text-center text-sm font-D3">2022 crypto-hash.io All Rights Reserved</p>
      </div>
     </footer>
 

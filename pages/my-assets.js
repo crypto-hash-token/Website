@@ -69,8 +69,8 @@ export default function MyAssets() {
           />
        </div>
       </div>
-      <div class="col-12 col-md-8 pb-3">
-        <p class="stage last py-5 h2 pl-md-5 text-white text-center text-sm font-D3">2022 crypto-hash.io All Rights Reserved</p>
+      <div className="col-12 col-md-8 pb-3">
+        <p className="stage last py-5 h2 pl-md-5 text-white text-center text-sm font-D3">2022 crypto-hash.io All Rights Reserved</p>
       </div>
      </footer>
     </>
@@ -109,8 +109,8 @@ export default function MyAssets() {
           />
        </div>
       </div>
-      <div class="col-12 col-md-8 pb-3">
-        <p class="stage last py-5 h2 pl-md-5 text-white text-center text-sm font-D3">2022 crypto-hash.io All Rights Reserved</p>
+      <div className="col-12 col-md-8 pb-3">
+        <p className="stage last py-5 h2 pl-md-5 text-white text-center text-sm font-D3">2022 crypto-hash.io All Rights Reserved</p>
       </div>
      </footer>
     </>

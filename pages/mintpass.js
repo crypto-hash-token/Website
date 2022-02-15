@@ -48,26 +48,26 @@ export default function MintPass () {
   return (
   <>
     <section id="Head">
-      <div class="bg-black px-20 pt-10">
-       <h1 class="flex flex-col justify-center items-center py-10 px-20 text-yellow-400 text-3xl font-D3">
+      <div className="bg-black px-20 pt-10">
+       <h1 className="flex flex-col justify-center items-center py-10 px-20 text-yellow-400 text-3xl font-D3">
         PRE-MINT
        </h1>
       </div>
       <div>
-        <p class="flex flex-col justify-center items-center pb-5 text-white text-lg font-D3">
+        <p className="flex flex-col justify-center items-center pb-5 text-white text-lg font-D3">
          250 ERC 1155 Assets Redeemable for FREE Mint dunring Whitelist Sale
         </p>
       </div>
       <div>
-      <h2 class="flex flex-col justify-center items-center text-white pb-3 text-2xl font-D3">
+      <h2 className="flex flex-col justify-center items-center text-white pb-3 text-2xl font-D3">
        .08 ETH Each
       </h2>
      </div>
     </section>
 
     <section id="Pre-Mint">
-     <div class="flex flex-col justify-center items-center bg-black">
-       <div class="">
+     <div className="flex flex-col justify-center items-center bg-black">
+       <div className="">
          <Image
            src={PreMint}
            width={333}
@@ -118,8 +118,8 @@ export default function MintPass () {
           </a>
        </div>
       </div>
-      <div class="col-12 col-md-8 pb-3">
-        <p class="stage last py-5 h2 pl-md-5 text-white text-center text-sm font-D3">2022 crypto-hash.io All Rights Reserved</p>
+      <div className="col-12 col-md-8 pb-3">
+        <p className="stage last py-5 h2 pl-md-5 text-white text-center text-sm font-D3">2022 crypto-hash.io All Rights Reserved</p>
       </div>
      </footer>
   </>
