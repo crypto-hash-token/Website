@@ -65,7 +65,7 @@ export default function CreateItem () {
     <section id="Head">
       <div className="bg-black px-20 pt-10">
        <h1 className="flex flex-col justify-center items-center py-10 px-20 text-yellow-400 text-3xl font-D3">
-        PRE-MINT
+        MINTPASS
        </h1>
       </div>
       <div>

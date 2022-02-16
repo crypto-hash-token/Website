@@ -30,9 +30,9 @@ function MyApp({ Component, pageProps }) {
                 Mint
               </a>
             </Link>
-            <Link href="/my-assets">
-              <a className="text-pink-500 font-D3">
-                My Digital Asset
+            <Link href="/redeem">
+              <a className="mr-6 text-pink-500 font-D3">
+                Redeem
               </a>
             </Link>
           </div>
@@ -47,10 +47,11 @@ export default MyApp
 
 
 
-
-//<Link href="/sandbox">
-//  <a className="text-pink-500 font-D3">
-//    Sandbox
+//<Link href="/my-assets">
+//  <a className="mr-6 text-pink-500 font-D3">
+//    My Digital Asset
+//  </a>
+//</Link>
 //  </a>
 //</Link>
 //<Link href="/create-item">

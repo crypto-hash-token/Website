@@ -55,12 +55,12 @@ export default function MintPass () {
       </div>
       <div>
         <p className="flex flex-col justify-center items-center pb-5 text-white text-lg font-D3">
-         250 ERC 1155 Assets Redeemable for FREE Mint dunring Whitelist Sale
+         250 ERC 1155 Assets Redeemable for FREE Mint
         </p>
       </div>
       <div>
       <h2 className="flex flex-col justify-center items-center text-white pb-3 text-2xl font-D3">
-       .08 ETH Each
+       0.1 ETH Each
       </h2>
      </div>
     </section>
