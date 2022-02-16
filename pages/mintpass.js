@@ -92,7 +92,7 @@ export default function MintPass () {
       <div className="flex justify-center bg-black">
         <div className="w-1/2 flex flex-col pb-12">
           <button onClick={mint} className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg">
-            Coming Soon / MINT
+            MINT
           </button>
         </div>
       </div>
