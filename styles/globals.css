@@ -6,9 +6,18 @@ html {
     overflow-x: hidden;
 }
 
+@layer utilities {
+    .repeat_bg_mobile {
+        background-size: 1500px;
+    }
+    .repeat_bg_desktop {
+        background-size: 2000px;
+    }
+}
+
 @font-face {
     font-family: 'D3';
-    src:url('/fonts/D3/D3-LiteBitMapism-Bold.ttf.woff') format('woff'),
+    src: url('/fonts/D3/D3-LiteBitMapism-Bold.ttf.woff') format('woff'),
         url('/fonts/D3/D3-LiteBitMapism-Bold.ttf.svg#D3-LiteBitMapism-Bold') format('svg'),
         url('/fonts/D3/D3-LiteBitMapism-Bold.ttf.eot'),
         url('/fonts/D3/D3-LiteBitMapism-Bold.ttf.eot?#iefix') format('embedded-opentype');
