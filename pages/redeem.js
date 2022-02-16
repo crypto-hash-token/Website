@@ -18,6 +18,11 @@ export default function Redeem() {
         REDEEM
        </p>
       </div>
+      <div>
+        <p className="flex flex-col justify-center items-center pb-5 text-white text-lg font-D3">
+         Smoke to Earn and Earn to Smoke
+        </p>
+      </div>
    </section>
 
    <section id="Capture">

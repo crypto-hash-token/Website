@@ -20,19 +20,14 @@ function MyApp({ Component, pageProps }) {
                 Home
               </a>
             </Link>
-            <Link href="/redeem">
-              <a className="mr-6 text-pink-500 font-D3">
-                Redeem
-              </a>
-            </Link>
             <Link href="/mintpass">
               <a className="mr-6 text-pink-500 font-D3">
                 Mint
               </a>
             </Link>
-            <Link href="/my-assets">
+            <Link href="/redeem">
               <a className="mr-6 text-pink-500 font-D3">
-                My Digital Asset
+                Redeem
               </a>
             </Link>
           </div>
@@ -47,7 +42,11 @@ export default MyApp
 
 
 
-
+//<Link href="/my-assets">
+//  <a className="mr-6 text-pink-500 font-D3">
+//    My Digital Asset
+//  </a>
+//</Link>
 //<Link href="/sandbox">
 //  <a className="mr-6 text-pink-500 font-D3">
 //    Sandbox

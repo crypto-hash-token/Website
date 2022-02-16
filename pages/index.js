@@ -68,7 +68,7 @@ export default function Home() {
             <div className="col-12 col-lg-4"></div>
             <div className="col-12 col-lg-8">
               <p className="text-white h2 text-center text-lg font-D3 leading-loose">
-                Crypto Hash is a Fair Launch Project and the Worlds First “Smoke to Earn” community Token. We are integrating unique technology to provide an alternative experience to crypto and cannabis users across the globe. HASH is Earned by redeeming Authentic Crypto Hash products sold only by our Authorized Retailers. Join us as we embark on a ride to the moon and beyond, oh and don’t forget to bring your robot!
+              “Smoke to earn and earn to smoke” with crypto hash tokens. Earn yours with every purchase of crypto hash products. Our unique integrated technology provides cannabis users the experience to the worlds first smoke to earn community. Join us as we embark on a ride to the moon and beyond. Don’t forget, bring your ROBOT!
               </p>
             </div>
           </div>
