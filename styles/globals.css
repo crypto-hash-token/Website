@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    overflow-x: hidden;
+}
+
 @font-face {
     font-family: 'D3';
     src:url('/fonts/D3/D3-LiteBitMapism-Bold.ttf.woff') format('woff'),

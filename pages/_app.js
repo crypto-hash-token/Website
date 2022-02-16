@@ -1,36 +1,45 @@
 import '../styles/globals.css'
 import Link from 'next/link'
+import { useEffect } from 'react'
+import { gsap } from 'gsap';
+// import ScrollTrigger from 'gsap/ScrollTrigger';
+const ScrollTrigger = require('gsap/dist/ScrollTrigger')
+
+
+gsap.registerPlugin(ScrollTrigger)
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div className="bg-black">
-      <nav className="boarder-b p-6 bg-black text-center">
-        <p className="text-8xl font-bold text-yellow-400 font-D3 text-center pt-10 pb-10">CRYPTO HASH</p>
-        <div className="flex mt-4 justify-center">
-          <Link href="/">
-            <a className="mr-6 text-pink-500 font-D3">
-              Home
-            </a>
-          </Link>
-          <Link href="/redeem">
-            <a className="mr-6 text-pink-500 font-D3">
-               Redeem
-            </a>
-          </Link>
-          <Link href="/mintpass">
-            <a className="mr-6 text-pink-500 font-D3">
-              Mint
-            </a>
-          </Link>
-          <Link href="/my-assets">
-            <a className="mr-6 text-pink-500 font-D3">
-              My Digital Asset
-            </a>
-          </Link>
-        </div>
-      </nav>
-      <Component {...pageProps} />
-    </div>
+    <>
+      <div className="bg-black">
+        <p className="text-8xl font-bold text-yellow-400 font-D3 text-center pt-20 pb-14" id="crypto_heading">CRYPTO HASH</p>
+        <nav className="boarder-b p-6 bg-black text-center sticky top-0 left-0 w-full z-50">
+          <div className="flex mt-4 justify-center">
+            <Link href="/">
+              <a className="mr-6 text-pink-500 font-D3">
+                Home
+              </a>
+            </Link>
+            <Link href="/redeem">
+              <a className="mr-6 text-pink-500 font-D3">
+                Redeem
+              </a>
+            </Link>
+            <Link href="/mintpass">
+              <a className="mr-6 text-pink-500 font-D3">
+                Mint
+              </a>
+            </Link>
+            <Link href="/my-assets">
+              <a className="mr-6 text-pink-500 font-D3">
+                My Digital Asset
+              </a>
+            </Link>
+          </div>
+        </nav>
+        <Component {...pageProps} />
+      </div>
+    </>
   )
 }
 

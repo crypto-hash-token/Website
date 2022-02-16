@@ -1,53 +1,75 @@
-import { useState } from 'react'
-import { ethers } from 'ethers'
-import { Web3Modal } from 'web3modal'
-
-import Link from 'next/link'
-import Mint from './mint'
-
+import { gsap } from 'gsap'
 import Image from 'next/image'
-import cryptoHash from '../public/grid.png'
-import cryptoHashLong from '../public/gridLong.png'
+import Link from 'next/link'
+import { useEffect } from 'react'
 import discord from '../public/Discord.png'
+import cryptoHashLong from '../public/gridLong.png'
 import twitter from '../public/Twitter.png'
-import discordHover from '../public/DiscordHover.png'
-import twitterHover from '../public/TwitterHover.png'
+
+
 
 export default function Home() {
+
+  useEffect(() => {
+    gsap.to('#bg_1', {
+      scrollTrigger: {
+        trigger: '#bgs_wrapper',
+        start: 'top 50%',
+        end: 'bottom top',
+        scrub: true
+      },
+      x: '-500px'
+    })
+    gsap.to('#bg_2', {
+      scrollTrigger: {
+        trigger: '#bgs_wrapper',
+        start: 'top 50%',
+        end: 'bottom top',
+        scrub: true
+      },
+      x: '500px'
+    })
+  }, [])
+
+  useEffect(() => {
+    gsap.to('#crypto_heading', {
+      scrollTrigger: {
+        trigger: '#crypto_heading',
+        start: 'top top',
+        end: 'bottom 15%',
+        scrub: true,
+        onUpdate(e) {
+          const floating_mint_btn = document.querySelector('#floating_mint_btn')
+
+          floating_mint_btn.style.opacity = e.progress
+          floating_mint_btn.style.transform = `translateY(${(1 - e.progress) * 20}px) translateX(-50%)`
+        }
+      },
+      opacity: 0
+    })
+  }, [])
+
+
   return (
     <>
 
-    <section id="Header">
-     <div className="flex flex-col justify-center items-center bg-black py-5">
-       <div className="-rotate-5 py-5 row-span-3 row-start-3 translate-x-75">
-         <Image
-           src={cryptoHashLong}
-           width={2000}
-           height={225}
-           layout="fixed"
-         />
-       </div>
-       <div className="bg-black">
-         <div className="-rotate-5 py-5 row-span-3 -translate-x-50">
-           <Image
-             src={cryptoHashLong}
-             width={2000}
-             height={225}
-             layout="fixed"
-             />
-         </div>
-       </div>
-     </div>
-   </section>
+      <section id="Header" className="mt-8 max-w-full overflow-hidden">
+        <div className="flex flex-col justify-center overflow-hidden items-center bg-black gap-10 -rotate-5" id="bgs_wrapper">
+          <div id="bg_1" className="w-[6000px] bg-cover bg-repeat h-[225px]" style={{ backgroundSize: '2000px', backgroundImage: `url(/gridLong.png)` }}>
+          </div>
+          <div id="bg_2" className="w-[6000px] bg-cover bg-repeat h-[225px]" style={{ backgroundSize: '2000px', backgroundImage: `url(/gridLong.png)` }}>
+          </div>
+        </div>
+      </section>
 
-       <section id="about">
-          <div className="bg-black px-20 py-20">
-            <div className="row">
-              <div className="col-12 col-lg-4"></div>
+      <section id="about" className="mt-10" >
+        <div className="bg-black px-20 py-20">
+          <div className="row">
+            <div className="col-12 col-lg-4"></div>
             <div className="col-12 col-lg-8">
-          <p className="text-white h2 text-center text-lg font-D3 leading-loose">
-          Crypto Hash is a Fair Launch Project and the Worlds First “Smoke to Earn” community Token. We are integrating unique technology to provide an alternative experience to crypto and cannabis users across the globe. HASH is Earned by redeeming Authentic Crypto Hash products sold only by our Authorized Retailers. Join us as we embark on a ride to the moon and beyond, oh and don’t forget to bring your robot!
-          </p>
+              <p className="text-white h2 text-center text-lg font-D3 leading-loose">
+                Crypto Hash is a Fair Launch Project and the Worlds First “Smoke to Earn” community Token. We are integrating unique technology to provide an alternative experience to crypto and cannabis users across the globe. HASH is Earned by redeeming Authentic Crypto Hash products sold only by our Authorized Retailers. Join us as we embark on a ride to the moon and beyond, oh and don’t forget to bring your robot!
+              </p>
             </div>
           </div>
         </div>
@@ -96,7 +118,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="Button">
+      {/* <section id="Button">
         <div className="flex justify-center bg-black">
           <div className="w-1/2 flex flex-col pb-12">
             <button href="/mint" className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg">
@@ -104,7 +126,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <footer className="flex flex-col justify-center items-center bg-black pt-5">
         <div>
@@ -119,13 +141,23 @@ export default function Home() {
               width={100}
               height={100}
             />
-         </div>
+          </div>
         </div>
         <div className="col-12 col-md-8 pb-3">
           <p className="stage last py-5 h2 pl-md-5 text-white text-center text-sm font-D3">2022 crypto-hash.io All Rights Reserved</p>
         </div>
-       </footer>
+      </footer>
 
-     </>
-   )
- }
+      {/* Floating Mint Button --Start-- */}
+      <div className="fixed bottom-10 left-1/2 -translate-x-1/2 w-fit opacity-0 translate-y-10 duration-200" id="floating_mint_btn" >
+        <Link href="/mintpass">
+          <a className="font-bold mt-4 bg-pink-500 hover:bg-pink-700 duration-150 text-white rounded text-base md:text-xl p-5 px-10 shadow-lg">
+            MINT
+          </a>
+        </Link>
+      </div>
+      {/* Floating Mint Button --End-- */}
+
+    </>
+  )
+}

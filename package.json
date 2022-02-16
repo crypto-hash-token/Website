@@ -21,6 +21,7 @@
     "ethereum-waffle": "^3.4.0",
     "ethers": "^5.5.4",
     "git": "^0.1.5",
+    "gsap": "^3.9.1",
     "hardhat": "^2.8.4",
     "hardhat-gas-reporter": "^1.0.6",
     "ipfs-http-client": "^55.0.0",
