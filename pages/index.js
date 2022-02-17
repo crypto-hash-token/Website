@@ -3,7 +3,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useRef } from 'react'
 import discord from '../public/Discord.png'
-import cryptoHashLong from '../public/gridLong.png'
 import twitter from '../public/Twitter.png'
 
 
@@ -43,31 +42,15 @@ export default function Home() {
         end: 'bottom 15%',
         scrub: true,
         onUpdate(e) {
-          if (!floating_mint_btn.current) return;
+          if (!floating_mint_btn?.current) return;
           floating_mint_btn.current.style.opacity = e.progress
-          floating_mint_btn.current.style.transform = `translateY(${(1 - e.progress) * 20}px) translateX(-50%)`
+          floating_mint_btn.current.style.pointerEvents = e.progress > 0 ? 'all' : 'none'
+          floating_mint_btn.current.style.transform = `translateY(${(1 - e.progress) * 20}px)`
         }
       },
       opacity: 0
     })
 
-    gsap.to(floating_mint_btn.current, {
-      scrollTrigger: {
-        trigger: footer.current,
-        start: 'top bottom',
-        end: 'bottom bottom',
-        scrub: true,
-        onUpdate(e) {
-          if (e.progress > 0) {
-            floating_mint_btn.current.style.pointerEvents = 'none'
-          } else {
-            floating_mint_btn.current.style.pointerEvents = 'all'
-          }
-          floating_mint_btn.current.style.opacity = 1 - e.progress
-        }
-      },
-      opacity: 0
-    })
   }, [bgs_wrapper, bg_1, bg_2, floating_mint_btn, footer])
 
 
@@ -89,7 +72,7 @@ export default function Home() {
             <div className="col-12 col-lg-4"></div>
             <div className="col-12 col-lg-8">
               <p className="text-white h2 text-center text-lg font-D3 leading-loose">
-              “Smoke to earn and earn to smoke” with crypto hash tokens. Earn yours with every purchase of crypto hash products. Our unique integrated technology provides cannabis users the experience to the worlds first smoke to earn community. Join us as we embark on a ride to the moon and beyond. Don’t forget, bring your ROBOT!
+                “Smoke to earn and earn to smoke” with crypto hash tokens. Earn yours with every purchase of crypto hash products. Our unique integrated technology provides cannabis users the experience to the worlds first smoke to earn community. Join us as we embark on a ride to the moon and beyond. Don’t forget, bring your ROBOT!
               </p>
             </div>
           </div>
@@ -139,15 +122,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section id="Button">
-        <div className="flex justify-center bg-black">
-          <div className="w-1/2 flex flex-col pb-12">
-            <button href="/mint" className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg">
-              MINT
-            </button>
-          </div>
-        </div>
-      </section> */}
+      <section id="Button" className="sticky bottom-0 left-0 w-full flex justify-center pb-4 z-50">
+        <Link href="/mint">
+          <a className="font-bold bg-pink-500 hover:bg-pink-700 duration-150 text-white rounded text-base md:text-xl p-5 px-10 shadow-lg opacity-0 pointer-events-none" ref={floating_mint_btn} >
+            MINT
+          </a>
+        </Link>
+      </section>
 
       <footer className="flex flex-col justify-center items-center bg-black pt-5" ref={footer}>
         <div>
@@ -168,17 +149,6 @@ export default function Home() {
           <p className="stage last py-5 h2 pl-md-5 text-white text-center text-sm font-D3">2022 crypto-hash.io All Rights Reserved</p>
         </div>
       </footer>
-
-      {/* Floating Mint Button --Start-- */}
-      <div className="fixed bottom-10 left-1/2 -translate-x-1/2 w-fit opacity-0 translate-y-10 duration-200" ref={floating_mint_btn} >
-        <Link href="/mintpass">
-          <a className="font-bold mt-4 bg-pink-500 hover:bg-pink-700 duration-150 text-white rounded text-base md:text-xl p-5 px-10 shadow-lg">
-            MINT
-          </a>
-        </Link>
-      </div>
-      {/* Floating Mint Button --End-- */}
-
     </>
   )
 }
