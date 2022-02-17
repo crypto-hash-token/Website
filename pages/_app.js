@@ -20,11 +20,6 @@ function MyApp({ Component, pageProps }) {
                 Home
               </a>
             </Link>
-            <Link href="/redeem">
-              <a className="text-pink-500 font-D3">
-                Redeem
-              </a>
-            </Link>
             <Link href="/mintpass">
               <a className="text-pink-500 font-D3">
                 Mint

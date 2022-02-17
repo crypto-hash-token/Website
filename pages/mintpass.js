@@ -9,7 +9,7 @@ import twitter from '../public/Twitter.png'
 import discordHover from '../public/DiscordHover.png'
 import twitterHover from '../public/TwitterHover.png'
 
-import abi from '/artifacts/contracts/MintPass.sol/MintPass.json'
+import { abi } from '/artifacts/contracts/MintPass.sol/MintPass.json'
 import { mintpassaddress } from '../config'
 
 // for Presale 250 Editions of ERC-1155
@@ -50,7 +50,7 @@ export default function MintPass () {
     <section id="Head">
       <div className="bg-black px-20 pt-10">
        <h1 className="flex flex-col justify-center items-center py-10 px-20 text-yellow-400 text-3xl font-D3">
-        PRE-MINT
+        MINTPASS
        </h1>
       </div>
       <div>
@@ -92,7 +92,7 @@ export default function MintPass () {
       <div className="flex justify-center bg-black">
         <div className="w-1/2 flex flex-col pb-12">
           <button onClick={mint} className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg">
-            Coming Soon / MINT
+            MINT
           </button>
         </div>
       </div>
