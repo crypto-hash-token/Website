@@ -20,7 +20,7 @@ async function main() {
 //  console.log(JSON.stringify({nft, hashMarket},null,2))
 
 const MintPassERC1155 = await hre.ethers.getContractFactory("MintPass");
-const MintPassDeployed = await MintPassERC1155.deploy("https://ipfs.infura.io:5001/api/v0/cat?arg=QmVAFDwovVYftBAui3ZaEade8FJ2ejYic7nn4Pgw72pZtr");
+const MintPassDeployed = await MintPassERC1155.deploy("ipfs://QmVAFDwovVYftBAui3ZaEade8FJ2ejYic7nn4Pgw72pZtr");
 await MintPassDeployed.deployed();
 console.log("MintPassERC1155 deployed to:", MintPassDeployed.address);
 
