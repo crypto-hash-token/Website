@@ -8,10 +8,18 @@ contract MintPass is ERC1155Supply, Ownable {
 
     uint constant public MAXIMUM_SUPPLY = 250;
     uint constant public MINT_PASS = 0;
+<<<<<<< Updated upstream
     uint public maxMintingPerTx = 2;
     uint public currentMintingFee = 8 ether / 100;
 
     constructor(string memory _baseUri) ERC1155(_baseUri) {}
+=======
+    uint public maxMintingPerTx = 10;
+    uint public currentMintingFee = 100000000000000000;
+
+    constructor() ERC1155("ipfs://QmY2wjtjWWTH6h9qDxQuWcJU52cW4TEjjvL6XDYCViLUGo") {}
+
+>>>>>>> Stashed changes
 
     function mint(uint256 amount) public payable
     {

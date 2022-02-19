@@ -92,7 +92,7 @@ export default function Home() {
               <h3 className="h1">STAGE 1</h3>
             </div>
             <div className="col-12 col-md-8">
-              <p className="stage py-1 h2 pl-md-5 text-center text-lg font-D3 pb-5 text-white">Produce Crypto Hash Joints</p>
+              <p className="stage py-1 h2 pl-md-5 text-center text-lg font-D3 pb-5 text-white">Friends and Family Pre-Sale</p>
             </div>
           </div>
           <div className="row text-pink-500 mb-4">
@@ -100,7 +100,7 @@ export default function Home() {
               <h3 className="h1">STAGE 2</h3>
             </div>
             <div className="col-12 col-md-8 pb-5">
-              <p className="stage py-1 h2 pl-md-5 text-center text-lg font-D3 text-white">Deploy CryptoHash Bonding Curve</p>
+              <p className="stage py-1 h2 pl-md-5 text-center text-lg font-D3 text-white">4/20 Launch Party</p>
             </div>
           </div>
           <div className="row text-pink-500 mb-4">
@@ -108,7 +108,7 @@ export default function Home() {
               <h3 className="h1">STAGE 3</h3>
             </div>
             <div className="col-12 col-md-8 pb-5">
-              <p className="stage py-1 h2 pl-md-5 text-center text-lg font-D3 text-white">Distribute Products to Partner Retailers</p>
+              <p className="stage py-1 h2 pl-md-5 text-center text-lg font-D3 text-white">Deploy Hash Token and Options Markets</p>
             </div>
           </div>
           <div className="row text-pink-500 mb-4">
@@ -116,7 +116,7 @@ export default function Home() {
               <h3 className="h1">STAGE 4</h3>
             </div>
             <div className="col-12 col-md-8 pb-5">
-              <p className="stage last py-1 h2 pl-md-5 text-center text-lg font-D3 text-white">Launch Crypto Hash Marketplace & NFT Drops</p>
+              <p className="stage last py-1 h2 pl-md-5 text-center text-lg font-D3 text-white">Into the Metaverse</p>
             </div>
           </div>
         </div>
@@ -133,16 +133,20 @@ export default function Home() {
       <footer className="flex flex-col justify-center items-center bg-black pt-5" ref={footer}>
         <div>
           <div>
+          <a href="https://twitter.com/cryptohashtoken?s=21">
             <Image
               src={twitter}
               width={100}
               height={100}
             />
+            </a>
+            <a href="https://discord.gg/jWYvBXTn">
             <Image
               src={discord}
               width={100}
               height={100}
             />
+            </a>
           </div>
         </div>
         <div className="col-12 col-md-8 pb-3">

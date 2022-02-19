@@ -81,7 +81,7 @@ export default function MintPass () {
         <section id="Selector">
           <div className="flex justify-center">
             <input
-              placeholder="Qty, Limit 2 per Wallet"
+              placeholder="Qty, Limit 10 per Transaction"
               className="mt-8 border rounded p-4 bg-pink-200 text-center"
               onChange={e => updateFormInput({...formInput, amount: e.target.value})}
             />
@@ -108,7 +108,7 @@ export default function MintPass () {
               height={100}
             />
           </a>
-          <a href="https://discord.com/invite/JhJrKYkn">
+          <a href="https://discord.gg/jWYvBXTn">
             <Image
               src={discord}
               width={100}

@@ -51,16 +51,20 @@ export default function Redeem() {
    <footer className="flex flex-col justify-center items-center bg-black pt-5">
      <div>
        <div>
+       <a href="https://twitter.com/cryptohashtoken?s=21">
          <Image
            src={twitter}
            width={100}
            height={100}
          />
+         </a>
+         <a href="https://discord.gg/jWYvBXTn">
          <Image
            src={discord}
            width={100}
            height={100}
          />
+         </a>
       </div>
      </div>
      <div className="col-12 col-md-8 pb-3">
