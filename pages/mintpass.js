@@ -55,7 +55,7 @@ export default function MintPass () {
       </div>
       <div>
         <p className="flex flex-col justify-center items-center pb-5 text-white text-lg text-center font-D3">
-         250 ERC 1155 Assets Redeemable for FREE Mint
+         250 ERC 1155 Assets; Qualifies Exclusive Airdrops
         </p>
       </div>
       <div>

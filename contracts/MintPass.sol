@@ -12,7 +12,7 @@ contract MintPass is ERC1155, ERC1155Supply, Ownable {
     uint public maxMintingPerTx = 10;
     uint public currentMintingFee = 100000000000000000;
 
-    constructor() ERC1155("ipfs://QmY2wjtjWWTH6h9qDxQuWcJU52cW4TEjjvL6XDYCViLUGo") {}
+    constructor() ERC1155("ipfs://QmTJvwsDN2ELbtbuL9HbBJqQiT4N7uEo8ZLEfvpVJfuXM3") {}
 
 
     function mint(uint256 amount) public payable
