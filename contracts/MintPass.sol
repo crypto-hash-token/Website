@@ -2,24 +2,18 @@
 pragma solidity ^0.8.4;
 
 import "@openzeppelin/contracts/token/ERC1155/extensions/ERC1155Supply.sol";
+import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract MintPass is ERC1155Supply, Ownable {
+contract MintPass is ERC1155, ERC1155Supply, Ownable {
 
     uint constant public MAXIMUM_SUPPLY = 250;
     uint constant public MINT_PASS = 0;
-<<<<<<< Updated upstream
-    uint public maxMintingPerTx = 2;
-    uint public currentMintingFee = 8 ether / 100;
-
-    constructor(string memory _baseUri) ERC1155(_baseUri) {}
-=======
     uint public maxMintingPerTx = 10;
     uint public currentMintingFee = 100000000000000000;
 
     constructor() ERC1155("ipfs://QmY2wjtjWWTH6h9qDxQuWcJU52cW4TEjjvL6XDYCViLUGo") {}
 
->>>>>>> Stashed changes
 
     function mint(uint256 amount) public payable
     {
@@ -39,5 +33,12 @@ contract MintPass is ERC1155Supply, Ownable {
 
     function setMaxMintingPerTx(uint256 _maxMintingPerTx) external onlyOwner {
         maxMintingPerTx = _maxMintingPerTx;
+    }
+
+    function _beforeTokenTransfer(address operator, address from, address to, uint256[] memory ids, uint256[] memory amounts, bytes memory data)
+    internal
+    override(ERC1155, ERC1155Supply)
+    {
+        super._beforeTokenTransfer(operator, from, to, ids, amounts, data);
     }
 }
