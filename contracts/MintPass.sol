@@ -19,7 +19,7 @@ contract MintPass is ERC1155, ERC1155Supply, Ownable {
     {
         require(msg.value >= amount * currentMintingFee, "Insufficent Minting Fee");
         require(totalSupply(MINT_PASS) + amount <= MAXIMUM_SUPPLY, "Total Supply = 250");
-        require(amount <= maxMintingPerTx, "Limit 2 Per Wallet");
+        require(amount <= maxMintingPerTx, "Limit 10 Per Wallet");
         _mint(msg.sender, MINT_PASS, amount, "");
     }
 
