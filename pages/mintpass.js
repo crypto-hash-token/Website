@@ -29,7 +29,7 @@ export default function MintPass () {
       return;
     }
     try{
-      let tx = await mintPassContract.mint(amount, { value: (amount * 8 + '0000000000000000')});
+      let tx = await mintPassContract.mint(amount, { value: ("100000000000000000")});
       tx.wait();
       if(tx) alert(`${amount} tokens minted successfull :)`)
       if(!tx) alert(`transaction failed with error: ${tx.msg}`)
