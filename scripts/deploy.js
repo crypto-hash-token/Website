@@ -8,25 +8,23 @@ const hre = require("hardhat");
 
 async function main() {
 
-  const HASHMarket = await hre.ethers.getContractFactory("HASHMarket");
-  const hashMarket = await HASHMarket.deploy();
-  await hashMarket.deployed();
-  console.log("HASHMarket deployed to:", hashMarket.address);
-
-  const NFT = await hre.ethers.getContractFactory("NFT");
-  const nft = await NFT.deploy(hashMarket.address);
-  await nft.deployed();
-  console.log("nft deployed to:", nft.address);
-//  console.log(JSON.stringify({nft, hashMarket},null,2))
+//   const HASHMarket = await hre.ethers.getContractFactory("HASHMarket");
+//   const hashMarket = await HASHMarket.deploy();
+//   await hashMarket.deployed();
+//   console.log("HASHMarket deployed to:", hashMarket.address);
+//
+//   const NFT = await hre.ethers.getContractFactory("NFT");
+//   const nft = await NFT.deploy(hashMarket.address);
+//   await nft.deployed();
+//   console.log("nft deployed to:", nft.address);
+// //  console.log(JSON.stringify({nft, hashMarket},null,2))
 
 const MintPassERC1155 = await hre.ethers.getContractFactory("MintPass");
-const MintPassDeployed = await MintPassERC1155.deploy("ipfs://QmVAFDwovVYftBAui3ZaEade8FJ2ejYic7nn4Pgw72pZtr");
+const MintPassDeployed = await MintPassERC1155.deploy();
 await MintPassDeployed.deployed();
 console.log("MintPassERC1155 deployed to:", MintPassDeployed.address);
 
 let config = `
-export const nftmarketplaceaddress = "${hashMarket.address}"
-export const nftaddress = "${nft.address}"
 export const mintpassaddress = "${MintPassDeployed.address}"
 `
 

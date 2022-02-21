@@ -5,8 +5,6 @@ require("@nomiclabs/hardhat-waffle");
 require("hardhat-gas-reporter");
 require("solidity-coverage");
 
-//const fs = require('fs')
-//const privateKey = fs.readFileSync(".secret").toString()
 const projectId = "95b5b9a081d94021a5028b149874b1ef"
 
 
@@ -18,7 +16,11 @@ module.exports = {
     },
     rinkeby: {
       url: 'https://rinkeby.infura.io/v3/95b5b9a081d94021a5028b149874b1ef',
-      accounts: ["0xac89c17266ae6308c5099413557a3055dcd8cadea43ba5b53b02feced03363d4"]
+      accounts: [process.env.PRIVATE_KEY]
+    },
+    mainnet: {
+      url: 'https://mainnet.infura.io/v3/95b5b9a081d94021a5028b149874b1ef',
+      accounts: [process.env.PRIVATE_KEY_M]
     },
     },
     etherscan: {
