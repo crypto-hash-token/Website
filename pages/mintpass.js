@@ -29,7 +29,8 @@ export default function MintPass () {
       return;
     }
     try{
-      let tx = await mintPassContract.mint(amount, { value: ("100000000000000000")});
+      const value = ethers.BigNumber.from("100000000000000000").mul(ethers.BigNumber.from(amount.toString()))
+      let tx = await mintPassContract.mint(amount, { value });
       tx.wait();
       if(tx) alert(`${amount} tokens minted successfull :)`)
       if(!tx) alert(`transaction failed with error: ${tx.msg}`)
