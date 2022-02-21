@@ -123,7 +123,7 @@ export default function Home() {
       </section>
 
       <section id="Button" className="sticky bottom-0 left-0 w-full flex justify-center pb-4 z-50">
-        <Link href="/mintpasst">
+        <Link href="/mintpass">
           <a className="font-bold bg-pink-500 hover:bg-pink-700 duration-150 text-white rounded text-base md:text-xl p-5 px-10 shadow-lg opacity-0 pointer-events-none" ref={floating_mint_btn} >
             MINT
           </a>
