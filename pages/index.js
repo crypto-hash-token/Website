@@ -59,9 +59,9 @@ export default function Home() {
 
       <section id="Header" className="mt-8 max-w-full overflow-hidden">
         <div className="flex flex-col justify-center overflow-hidden items-center bg-black md:gap-10 -rotate-5" ref={bgs_wrapper}>
-          <div ref={bg_1} className="w-[6000px] bg-cover bg-repeat-x h-[225px] repeat_bg_mobile md:repeat_bg_desktop" style={{ backgroundImage: `url(/gridLong.png)` }}>
+          <div ref={bg_1} className="w-[6000px] bg-cover bg-repeat-x h-[225px] repeat_bg_mobile md:repeat_bg_desktop" style={{ backgroundImage: `url(/gridLong1.png)` }}>
           </div>
-          <div ref={bg_2} className="w-[6000px] -mt-8 md:mt-0 bg-cover bg-repeat-x h-[225px] repeat_bg_mobile md:repeat_bg_desktop" style={{ backgroundImage: `url(/gridLong.png)` }}>
+          <div ref={bg_2} className="w-[6000px] -mt-8 md:mt-0 bg-cover bg-repeat-x h-[225px] repeat_bg_mobile md:repeat_bg_desktop" style={{ backgroundImage: `url(/gridLong2.png)` }}>
           </div>
         </div>
       </section>
