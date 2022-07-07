@@ -89,35 +89,35 @@ export default function Home() {
           </div>
           <div className="row text-pink-500 mb-4">
             <div className="col-12 col-md-4 text-center text-xl text-bold font-D3 pb-5">
-              <h3 className="h1">STAGE 1</h3>
+              <h3 className="h1">Crypto Hash Metaverse</h3>
             </div>
-            <div className="col-12 col-md-8">
-              <p className="stage py-1 h2 pl-md-5 text-center text-lg font-D3 pb-5 text-white">Friends and Family Pre-Sale</p>
+            <div className="col-12 col-md-8 pb-5">
+              <p className="stage py-1 h2 pl-md-5 text-center text-lg font-D3 text-white">Crypto-Hash NFTs are Playable in the Sandbox Metaverse where our first Headquarters and Lounge space is being deployed. As the premier platform for the cannabis consumers connect and share ideas regardless of geolocation. Our robust Metaverse buildout includes games, customizable spaces, shopping, and more!</p>
             </div>
           </div>
           <div className="row text-pink-500 mb-4">
             <div className="col-12 col-md-4 text-center text-xl text-bold font-D3 pb-5">
-              <h3 className="h1">STAGE 2</h3>
+              <h3 className="h1">Crypto Hash Compliance</h3>
             </div>
             <div className="col-12 col-md-8 pb-5">
-              <p className="stage py-1 h2 pl-md-5 text-center text-lg font-D3 text-white">4/20 Launch Party</p>
+              <p className="stage py-1 h2 pl-md-5 text-center text-lg font-D3 text-white">Seed to Sale Tracking on Cannabis Cultivation, Processing, and Sales is required in virtually every regulated cannabis market. Crypto Hash Token aims to become the industry leader in Cannabis Compliance Internationally.</p>
             </div>
           </div>
           <div className="row text-pink-500 mb-4">
             <div className="col-12 col-md-4 text-center text-xl text-bold font-D3 pb-5">
-              <h3 className="h1">STAGE 3</h3>
+              <h3 className="h1">Crypto Hash Token</h3>
             </div>
             <div className="col-12 col-md-8 pb-5">
-              <p className="stage py-1 h2 pl-md-5 text-center text-lg font-D3 text-white">Deploy Hash Token and Options Markets</p>
+              <p className="stage last py-1 h2 pl-md-5 text-center text-lg font-D3 text-white">Crypto Hash Token allows stores to take payments via Credit/Debit Cards and also doubles as a reward for purchases made in store. Smoke to Earn and Earn to Smoke 💨.</p>
             </div>
           </div>
-          <div className="row text-pink-500 mb-4">
-            <div className="col-12 col-md-4 text-center text-xl text-bold font-D3 pb-5">
-              <h3 className="h1">STAGE 4</h3>
-            </div>
-            <div className="col-12 col-md-8 pb-5">
-              <p className="stage last py-1 h2 pl-md-5 text-center text-lg font-D3 text-white">Into the Metaverse</p>
-            </div>
+        </div>
+        <div className="row text-pink-500 mb-4">
+          <div className="col-12 col-md-4 text-center text-xl text-bold font-D3 pb-5">
+            <h3 className="h1">Crypto Hash Marketplace</h3>
+          </div>
+          <div className="col-12 col-md-8">
+            <p className="stage py-1 h2 pl-md-5 text-center text-lg font-D3 pb-5 text-white">Consumers earn tokens for every purchase with a chance to receive a mystery item. These items can be bought, sold, and traded in our marketplace and when equipped automatically update the metadata of your NFT. Yes, thats right, Crypto Hash NFTs are Dynamic and Modifiable by the owner!</p>
           </div>
         </div>
       </section>
