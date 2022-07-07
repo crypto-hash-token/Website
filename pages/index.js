@@ -92,7 +92,7 @@ export default function Home() {
               <h3 className="h1">Crypto Hash Metaverse</h3>
             </div>
             <div className="col-12 col-md-8 pb-5">
-              <p className="stage py-1 h2 pl-md-5 text-center text-lg font-D3 text-white">Crypto-Hash NFTs are Playable in the Sandbox Metaverse where our first Headquarters and Lounge space is being deployed. As the premier platform for the cannabis consumers connect and share ideas regardless of geolocation. Our robust Metaverse buildout includes games, customizable spaces, shopping, and more!</p>
+              <p className="stage py-1 h2 pl-md-5 text-center text-lg font-D3 text-white">Crypto-Hash NFTs are Playable in the Sandbox Metaverse where our first Headquarters and Lounge space is being deployed. As the premier platform for the cannabis community to connect and share ideas our Metaverse buildout is robust including games, customizable spaces, shopping, and more!</p>
             </div>
           </div>
           <div className="row text-pink-500 mb-4">
